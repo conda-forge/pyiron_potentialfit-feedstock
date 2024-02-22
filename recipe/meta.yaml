@@ -1,5 +1,5 @@
 {% set name = "pyiron_potentialfit" %}
-{% set version = "0.0.1" %}
+{% set version = "0.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,25 +7,26 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyiron_potentialfit-{{ version }}.tar.gz
-  sha256: edefa4b05245d62ae705e041f7fdb802780955f79f9cffcfd3846e7ffccbd96b
+  sha256: 2905b6a6a8fa37bb4a3b91df3ef42f140a215e7494d78655625602e2c7f939c5
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   host:
     - python >=3.8
     - pip
   run:
+    - runnerase >=0.3.3
     - python >=3.8
     - ase >=3.22.1
-    - pyiron_atomistics >=0.3.4
-    - matplotlib-base >=3.8.0
-    - numpy >=1.26.0
-    - pyiron_base >=0.6.7
-    - scipy >=1.11.3
+    - pyiron_atomistics >=0.4.16
+    - matplotlib-base >=3.8.2
+    - numpy >=1.26.2
+    - pyiron_base >=0.7.9
+    - scipy >=1.11.4
 
 test:
   imports:
@@ -47,4 +48,3 @@ extra:
     - pyiron-runner
     - jan-janssen
     - pmrv
-    - niklassiemer
