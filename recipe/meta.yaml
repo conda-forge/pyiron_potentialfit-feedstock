@@ -1,13 +1,13 @@
 {% set name = "pyiron_potentialfit" %}
-{% set version = "0.3.7" %}
+{% set version = "0.3.8" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyiron_potentialfit-{{ version }}.tar.gz
-  sha256: dca8a5fb3d8efe1275b8cb89a629f6cdb8286fc6a7451a5b904c0394534ee9a5
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyiron_potentialfit-{{ version }}.tar.gz
+  sha256: 44c384a5f924c9b2586da0b67d0a53646a512773b6668e3a1ba1d4ac77608463
 
 build:
   noarch: python
@@ -18,6 +18,7 @@ requirements:
   host:
     - python >=3.8
     - pip
+    - setuptools
   run:
     - pyparsing >=3.1.2,<3.2
     - pyiron_contrib >=0.1.18
@@ -28,10 +29,10 @@ requirements:
     - runnerase >=0.3.3
     - python >=3.8
     - ase >=3.23.0
-    - pyiron_atomistics >=0.6.10
+    - pyiron_atomistics >=0.6.18
     - matplotlib-base >=3.8.4,<4
     - numpy >=1.26.4
-    - pyiron_base >=0.9.11
+    - pyiron_base >=0.10.9
     - scipy >=1.14.0
 
 test:
