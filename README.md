@@ -27,7 +27,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-pyiron_potentialfit-green.svg)](https://anaconda.org/conda-forge/pyiron_potentialfit) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyiron_potentialfit.svg)](https://anaconda.org/conda-forge/pyiron_potentialfit) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyiron_potentialfit.svg)](https://anaconda.org/conda-forge/pyiron_potentialfit) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyiron_potentialfit.svg)](https://anaconda.org/conda-forge/pyiron_potentialfit) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pyiron__potentialfit-green.svg)](https://anaconda.org/conda-forge/pyiron_potentialfit) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyiron_potentialfit.svg)](https://anaconda.org/conda-forge/pyiron_potentialfit) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyiron_potentialfit.svg)](https://anaconda.org/conda-forge/pyiron_potentialfit) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyiron_potentialfit.svg)](https://anaconda.org/conda-forge/pyiron_potentialfit) |
 
 Installing pyiron_potentialfit
 ==============================
