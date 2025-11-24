@@ -1,5 +1,5 @@
 {% set name = "pyiron_potentialfit" %}
-{% set version = "0.3.13" %}
+{% set version = "0.3.14" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyiron_potentialfit-{{ version }}.tar.gz
-  sha256: e443ea6c7682c3170aa567ebda8dbaf33bca67d3689d8c2c87fb55009b93244f
+  sha256: 8eb2998f30770589ed9950d8ac6403d0882eeba1280f300e716d0de717cc691e
 
 build:
   noarch: python
