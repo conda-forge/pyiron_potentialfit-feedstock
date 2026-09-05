@@ -1,23 +1,26 @@
-{% set name = "pyiron_potentialfit" %}
-{% set version = "0.3.15" %}
-{% set python_min = "3.11" %}
+schema_version: 1
+
+context:
+  name: pyiron_potentialfit
+  version: "0.3.15"
+  python_min: "3.11"
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyiron_potentialfit-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pyiron_potentialfit-${{ version }}.tar.gz
   sha256: ca510dcd9085cc8a1495875bd3d0e6f2a722c02b5987595723f615ee1fc7f393
 
 build:
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python 3.11.*
     - pip
     - setuptools
   run:
@@ -28,7 +31,7 @@ requirements:
     - dill >=0.3.0
     - seaborn >=0.13.0,<0.14
     - runnerase >=0.3.3
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - ase >=3.25.0
     - pyiron_atomistics >=0.8.4
     - matplotlib-base >=3.8.4,<4
@@ -36,20 +39,18 @@ requirements:
     - pyiron_base >=0.15.7
     - scipy >=1.16.3
 
-test:
-  imports:
-    - pyiron_potentialfit
-  commands:
-    - pip check
-  requires:
-    - pip
-    - python {{ python_min }}
+tests:
+  - python:
+      imports:
+        - pyiron_potentialfit
+      pip_check: true
+      python_version: ${{ python_min }}
 
 about:
-  home: https://github.com/pyiron/pyiron_potentialfit
   summary: Fitting machine learning interatomic potentials with pyiron.
   license: BSD-3-Clause
   license_file: LICENSE
+  homepage: https://github.com/pyiron/pyiron_potentialfit
 
 extra:
   recipe-maintainers:
